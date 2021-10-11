@@ -42,3 +42,4 @@ function draw() {
 	noStroke();
 	fill(255);
 	rect(0, height - 10, (phi / TWO_PI) * width, 5);
+}
