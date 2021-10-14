@@ -3,13 +3,9 @@ const r = 0.5;
 let phi = 0;
 const phiSpeed = 0.01;
 let slide = 0;
-let canvas;
 
 function setup() {
-	let p5Canvas = createCanvas(800, 800);
-
-	canvas = p5Canvas.canvas;
-
+	createCanvas(800, 800);
 	slide = createSlider(0, 10, 0, 0);
 }
 
@@ -24,7 +20,6 @@ function getPos(theta, noiseMax) {
 }
 
 function draw() {
-	//capturer.start();
 	background(0);
 	let noiseMax = slide.value();
 	translate(width / 2, height / 2);
@@ -42,10 +37,9 @@ function draw() {
 
 	endShape(CLOSE);
 	pop();
-	//end main shape
 
 	const [ellipseX, ellipseY] = getPos(radians(frameCount), noiseMax);
-	//ellipse
+
 	push();
 	fill(255);
 	ellipse(ellipseX, ellipseY, 13, 13);
@@ -54,14 +48,11 @@ function draw() {
 	phi += phiSpeed;
 
 	if (phi >= TWO_PI) {
-		phi = 0; //debugging
+		phi = 0; 
 		console.log("REAPEAT");
-		//capturer.stop();
-		//capturer.save();
 	}
 
 	noStroke();
 	fill(255);
 	//rect(0, height - 10, (phi / TWO_PI) * width, 5);
-	//capturer.capture(canvas);
 }
