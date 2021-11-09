@@ -24,8 +24,6 @@ function draw() {
 	scale(50, 50, 50);
 	let noiseMax = slider.value();
 
-	beginShape();
-	stroke(255);
 	for (let theta = 0; theta < TWO_PI; theta += radians(10)) {
 		const xoff = (R + r * cos(theta)) * cos(phi) * noiseMax;
 		const zoff = (R + r * cos(theta)) * sin(phi) * noiseMax;
@@ -33,7 +31,6 @@ function draw() {
 		//vertex(xoff, yoff, zoff);
 		points.push([xoff, yoff, zoff]);
 	}
-	endShape();
 
 	phi += phiSpeed;
 
