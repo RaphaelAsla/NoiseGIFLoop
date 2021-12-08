@@ -1,5 +1,5 @@
 # NoiseGIFLoop <div align="left">
-  <img width="400"  src="https://user-images.githubusercontent.com/65507003/136805059-09b218d2-de1f-44c8-b454-61e39577a05a.gif" alt="animated">
+  <img width="380"  src="https://user-images.githubusercontent.com/65507003/136805059-09b218d2-de1f-44c8-b454-61e39577a05a.gif" alt="animated">
 </div>
 Made with p5.js
 I i got this seamless looping chaos effect by using the torus formula to get values inside PerlinNoise 3D space.
